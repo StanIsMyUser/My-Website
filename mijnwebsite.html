@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="Eng">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My BIO</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome at my BIO/Info page!</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showPage('home')">Home</a></li>
+                <li><a onclick="showPage('about')">About</a></li>
+                <li><a onclick="showPage('contact')">Contact</a></li>
+                <li><a onclick="showPage('other')">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="active">
+            <h2>Bio</h2>
+                <style>
+                    .ronde-knop {
+                        background-color: #ffd20a; /* Groene achtergrond */
+                        border: none; /* Geen rand */
+                        color: wit; /* Witte tekst */
+                        padding: 20px; /* Ruime padding */
+                        text-align: center; /* Tekst gecentreerd */
+                        text-decoration: none; /* Geen onderstreping */
+                        display: inline-block; /* Inline-block weergave */
+                        font-size: 16px; /* Grotere tekst */
+                        margin: 4px 2px; /* Kleine marge */
+                        cursor: pointer; /* Handcursor bij hover */
+                        border-radius: 50px; /* Afgeronde hoeken */
+                    }
+                </style>
+                <a href="google.com" class="ronde-knop">Hi!</a>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>inner text</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required>
+                <div></div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <div></div>
+                <label for="message">Bericht:</label>
+                <textarea id="message" name="message" required></textarea>
+                <div></div>
+                <button type="submit">Verzenden</button>
+            </form>
+        </section>
+        <section>id="other">
+            <h2>Other</h2>
+            <p>How is it going?</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 My Website. All rights remaind.</p>
+    </footer>
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
